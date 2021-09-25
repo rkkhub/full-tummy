@@ -3,11 +3,12 @@ LABEL MAINTAINTER=rkkmailbox@gmail.com
 
 ENV PYTHONUNBUFFERED 1
 
-RUN mkdir /app
-COPY ./requirements.txt /app/requirements.txt
-WORKDIR /app
+COPY ./requirements.txt /requirements.txt
 RUN pip install -r ./requirements.txt
 
-RUN useradd --create-home -ms /bin/bash -U dev
+RUN mkdir /app
+WORKDIR /app
+COPY ./app /app
 
+RUN useradd --create-home -ms /bin/bash -U dev
 USER dev
