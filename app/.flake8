@@ -1,6 +1,4 @@
 [flake8]
-exclude =
-    migrations,
-    __pycache__,
-    manage.py,
-    settings.py,
+ignore = E501
+exclude = settings.py,migrations,__pycache__,manage.py
+    
