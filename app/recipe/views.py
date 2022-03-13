@@ -13,3 +13,7 @@ class TagViewSet(viewsets.GenericViewSet, mixins.ListModelMixin):
     permission_classes = (IsAuthenticated,)
     quertset = Tag.objects.all()
     serializer_class = serializers.TagSerializer
+
+    def get_queryset(self):
+        """Return objects for the current authenticated user only"""
+        return self.quertset.filter(user=self.request.user).order_by('-name')
