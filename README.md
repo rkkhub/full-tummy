@@ -1,5 +1,11 @@
 # full-tummy
 
+### To do
+* Auto expiry token
+* Filter
+* Pagination
+* Api Documentation
+
 
 Migrations
 ```
