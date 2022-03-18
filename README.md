@@ -31,10 +31,10 @@ docker-compose run --rm app sh -c "python manage.py startapp recipe"
 
 [dev-creds]
 
-super user
+* super user
 email: user_su@fulltummy.com
 password: password
 
-dev
+* dev
 email: dev_user@fulltummy.com
 password: myDevP@s$

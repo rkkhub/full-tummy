@@ -53,6 +53,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # Custom middleware
+    'core.middleware.common.MaintenanceModeMiddleware',
 ]
 
 ROOT_URLCONF = 'app.urls'
@@ -133,4 +135,7 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+
+# Custom settings
 AUTH_USER_MODEL = 'core.User'
+MAINTENANCE_MODE = False
